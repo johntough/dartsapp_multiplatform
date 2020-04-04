@@ -1,0 +1,27 @@
+extends layout
+
+block layout-content
+
+    div.View.FixturesContent
+        div.Message
+            div.Title
+                h3 Fixtures #{selected_season}
+                br
+                if fixtures !== undefined
+                  table(class="table")
+                      thead(class="thead-dark")
+                          tr: th Fixture Date
+                              th Home Team
+                              th Away Team
+                      tbody
+                          each fixture in fixtures
+                              tr
+                                  td= fixture.fixture_date
+                                  td= fixture.home_team
+                                  td= fixture.away_team
+                else
+                  table(class="table")
+                      thead(class="thead-dark")
+                          tr: th Fixture Date
+                              th Home Team
+                              th Away Team

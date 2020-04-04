@@ -5,10 +5,10 @@ block layout-content
         nav.navbar.navbar-expand-lg.navbar-light.bg-light
             .collapse.navbar-collapse(id='navbarSupportedContent')
                 ul.navbar-nav.mr-auto
-                    li.nav-item.active
-                        a.nav-link(href='/') Home
                     li.nav-item
-                        a.nav-link(href='/teams') Teams
+                        a.nav-link(href='/') Home
+                    li.nav-item.active
+                            a.nav-link(href='#') Teams
                     li.nav-item
                         a.nav-link(href='/fixtures_selection') Team Fixtures
                     li.nav-item
@@ -16,15 +16,16 @@ block layout-content
                     li.nav-item
                         a.nav-link(href='/players') BMC Players
 
-    div.View.UserView
-        h1.Banner Howdy, #{userProfile.nickname}!
+    div.View.TeamsView
+        h1.Banner BMC Darts
         div.Message
             div.Title
-                h3 BMC
-                h1 Teammate Profile
-            h3 Player Name: #{displayName}
-            br
-            img(src=picture)
-        div.NavButtons
-            a(href="/logout")
-                div.NavButton Log out
+              h3 Teams
+
+            table(class="table")
+                thead(class="thead-dark")
+                    tr: th Team names
+                tbody
+                    each team in teamnames
+                        tr
+                            td= team.name

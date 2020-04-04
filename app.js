@@ -21,6 +21,9 @@ const authRouter = require("./auth");
 const app = express();
 const port = process.env.PORT || "8000";
 
+require("./database");
+require("./teams")(app);
+require("./fixtures")(app);
 /**
  * Session Configuration
  */
@@ -115,6 +118,7 @@ app.get("/user", secured, (req, res, next) => {
         picture: userProfile.picture
     });
 });
+
 
 /**
  * Server Activation

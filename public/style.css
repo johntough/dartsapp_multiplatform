@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Raleway:800|Merriweather+Sans|Share+Tech+Mono");
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css");
 
 :root {
   --logo-font: "Share Tech Mono", monospace;
@@ -158,4 +159,29 @@ a {
 .UserView {
   background: url("images/user_background_2.jpg") left bottom;
   background-size: cover;
+}
+
+.TeamsView {
+
+}
+
+.FixturesContent {
+
+}
+
+.FixturesView {
+  display: block;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+
+.dropdown-menu .sub-menu {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  margin-top: -1px;
 }
